@@ -1,12 +1,11 @@
 %% rireki.cls
-%% $Date: 2002/01/28 12:47:18 $
+%% $Date: 2002/02/03 09:50:06 $
 %%
 %% Copyright (C) 2002 MIYAMOTO Yusuke
 %% All rights reserved.
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{rireki}
-%\DeclareOption*{\PassOptionsToClass{\CurrentOption}{jarticle}}
 \ProcessOptions
 \LoadClass[twoside,11pt]{jarticle}
 %% 用紙サイズ (B5)
@@ -430,7 +429,7 @@
 }
 
 %% 保護者郵便番号
-\newcommand{\@guardianpostalCode}\@empty
+\newcommand{\@guardianpostalcode}\@empty
 \newcommand{\GuardianPostalCode}[1]{\def\@guardianpostalcode{\texttt{#1}}}
 
 %% 保護者住所
@@ -487,6 +486,7 @@
 
 %% コマンドの別名
 \let\再生紙=\RecycledPaper\relax
+\let\日付=\date\relax
 \let\姓=\SurName\relax
 \let\名=\ForeName\relax
 \let\性別=\Sex\relax
