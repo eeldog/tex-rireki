@@ -1,15 +1,14 @@
 %% rireki.cls
-%% $Date: 2002/01/25 19:52:20 $
+%% $Date: 2002/01/27 08:31:08 $
 %%
 %% Copyright (C) 2002 MIYAMOTO Yusuke
 %% All rights reserved.
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{rireki}
-\DeclareOption*{\PassOptionsToClass{\CurrentOption}{jarticle}}
+%\DeclareOption*{\PassOptionsToClass{\CurrentOption}{jarticle}}
 \ProcessOptions
 \LoadClass[twoside,11pt]{jarticle}
-
 %% 用紙サイズ (B5)
 \setlength{\paperwidth}{181mm}
 \setlength{\paperheight}{257mm}
@@ -58,7 +57,7 @@
 \newcounter{pic@x}
 \newcounter{pic@y}
 \def\MoveTo(#1,#2){\gdef\@x{#1}\gdef\@y{#2}}
-\def\RMoveTo(#1,#2){%
+\def\RMoveTo(#1,#2){ %
   \@tempcnta=\number\@x
   \advance\@tempcnta by #1
   \xdef\@x{\the\@tempcnta}
@@ -76,13 +75,14 @@
   \addtocounter{pic@y}{-#2}
   \put(\thepic@x, \thepic@y)%
 }
-\def\MultiPut(#1,#2){%
+
+\def\MultiPut(#1,#2)(#3,#4){
   \setcounter{pic@x}{\@x}
   \setcounter{pic@y}{\pic@height}
   \addtocounter{pic@x}{#1}
   \addtocounter{pic@y}{-\@y}
   \addtocounter{pic@y}{-#2}
-  \multiput(\thepic@x, \thepic@y)%
+  \multiput(\thepic@x,\thepic@y)(#3,-#4)%
 }
 
 %% 履歴書を作成するコマンド．\end{document} で実行される．
@@ -97,11 +97,11 @@
 
 %% picture 環境
 \noindent
-\begin{picture}(\pic@width, \pic@height)
+\begin{picture}(\pic@width,\pic@height)
 
 %% タイトル，写真位置
 \MoveTo(0,0)
-\Put(0,0){\Large\bf\kanjiskip=5mm\historyname}
+\Put(0,0){\Large\bfseries\kanjiskip=5mm\historyname}
 \Put(100,2){\makebox(0,5)[rc]{\scriptsize\@date 現在}}
 \Put(105,31){\dashbox{0.5}(28,38)[c]{\scriptsize %
   \shortstack[c]{写真を貼る位置\\縦 36 〜 40 mm\\横 24 〜 30 mm}}}
@@ -171,13 +171,11 @@
 \Put(0,5){\makebox(17,5)[c]{\scriptsize 年}}
 \Put(17,5){\makebox(9,5)[c]{\scriptsize 月}}
 \Put(26,5){\makebox(125,5)[c]{\scriptsize\backgroundname}}
-\@tempcnta=5
-\@whilenum\@tempcnta<145\do{
-  \advance\@tempcnta by 7
-  \Put(0,\the\@tempcnta){\line(1,0){151}}
-}
+
+\MultiPut(0,5)(0,7){20}{\line(1,0){151}}
 \@starttoc{lob} % list of background
 \@starttoc{loc} % list of career
+
 \MoveTo(0,0)
 \@firstpagehook
 \end{picture}
@@ -207,11 +205,8 @@
 \Put(17,5){\makebox(9,5)[c]{\scriptsize 月}}
 \Put(26,5){\makebox(125,5)[c]{\scriptsize\licensename}}
 \Put(0,5){\line(1,0){151}}
-\@tempcnta=5
-\@whilenum\@tempcnta<70\do{
-  \advance\@tempcnta by 7
-  \Put(0,\@tempcnta){\line(1,0){151}}
-}
+
+\MultiPut(0,5)(0,7){10}{\line(1,0){151}}
 \@starttoc{lol} % list of licenses
 
 %% 得意科目
@@ -240,16 +235,16 @@
 \Put(1,203){\makebox(45,8)[r]{\@commute}}
 \Put(48,194){\line(0,-1){9}}
 %% 扶養家族
-\Put(49,204){\makebox(34,8)[lt]{\scriptsize\dependentsname}}
-\Put(49,204){\makebox(30,8)[r]{\@dependents}}
-\Put(84,195){\line(0,-1){9}}
+\Put(49,203){\makebox(34,8)[lt]{\scriptsize\dependentsname}}
+\Put(49,203){\makebox(30,8)[r]{\@dependents}}
+\Put(84,194){\line(0,-1){9}}
 %% 配偶者
-\Put(85,204){\makebox(33,8)[lt]{\scriptsize\matename}}
-\Put(85,204){\makebox(29,8)[r]{\@mate}}
-\Put(116,195){\line(0,-1){9}}
+\Put(85,203){\makebox(33,8)[lt]{\scriptsize\matename}}
+\Put(85,203){\makebox(29,8)[r]{\@mate}}
+\Put(116,194){\line(0,-1){9}}
 %% 配偶者の扶養義務
-\Put(117,204){\makebox(34,8)[lt]{\scriptsize\matedependencename}}
-\Put(117,204){\makebox(30,8)[r]{\@matedependence}}
+\Put(117,203){\makebox(34,8)[lt]{\scriptsize\matedependencename}}
+\Put(117,203){\makebox(30,8)[r]{\@matedependence}}
 %% 保護者
 \Put(0,212){\dashbox{.5}(151,9){}}
 \Put(1,212){\makebox(124,8)[lt]{\scriptsize\guardianname}}
@@ -283,7 +278,7 @@
 
 %% 履歴書 作成日
 \renewcommand{\@date}{\today}
-\renewcommand{\date}[1]{\def\@date{#1}}
+\renewcommand{\date}[1]{\edef\@date{#1}}
 
 %% 姓
 \newcommand\@surname\@empty
@@ -372,7 +367,7 @@
     \fi
   \else\ifnum\month<\thebirth@month
     \addtocounter{@ge}{-1}
-  \fi\fi
+  \fi
   \def\@birthday{\年号\thebirth@year 年 \thebirth@month 月 \thebirth@day 日生}
 }
 
