@@ -1,5 +1,5 @@
 %% rireki.cls
-%% $Date: 2002/01/21 18:59:32 $
+%% $Date: 2002/01/23 16:42:20 $
 %%
 %% Copyright (C) 2002 MIYAMOTO Yusuke
 %% All rights reserved.
@@ -102,7 +102,7 @@
 \MoveTo(0,0)
 \Put(0,0){\Large\bf\kanjiskip=5mm\historyname}
 \Put(100,2){\makebox(0,5)[rc]{\scriptsize\@date 現在}}
-\Put(104,32){\dashbox{0.5}(30,40)[c]{\scriptsize %
+\Put(105,31){\dashbox{0.5}(28,38)[c]{\scriptsize %
   \shortstack[c]{写真を貼る位置\\縦 $36\sim 40$ mm\\横 $24\sim 30$ mm}}}
 \@tempcnta=\number\paperheight
 \divide\@tempcnta by 2
@@ -138,45 +138,45 @@
 \Put(0,34){\line(1,0){100}}
 
 \Put(0,39){\dashbox{.5}(151,5)[l]{\hspace{1mm}\scriptsize\kananame}}
-\Put(10,38){\makebox(0,0)[lb]{\hskip 1zw\scriptsize\kana@address}}
+\Put(20,38){\makebox(0,0)[lb]{\scriptsize\kana@address}}
 \Put(1,40){\makebox(0,0)[tl]{\scriptsize\addressname}}
 \Put(12,40){\makebox(0,0)[lt]{\small 〒 \@postalcode}}
-\Put(0,48){\makebox(148,5)[cb]{\@address}}
+\Put(20,48){\makebox(148,5)[lb]{\@address}}
 \Put(0,50){\line(1,0){151}}
 \Put(1,51){\makebox(0,0)[tl]{\scriptsize\contactname}}
-\Put(0,58){\makebox(151,8)[bl]{\@phone\@email}}
+\Put(5,58){\makebox(151,8)[bl]{\@phone\@email}}
 \Put(0,59){\line(1,0){151}}
 \Put(0,64){\dashbox{.5}(151,5)[l]{\hspace{1mm}\scriptsize\kananame}}
-\Put(10,63){\makebox(0,0)[lb]{\hskip 1zw\scriptsize\kana@anotheraddress}}
+\Put(20,64){\makebox(0,5)[l]{\scriptsize\kana@anotheraddress}}
 \Put(1,65){\makebox(0,0)[tl]{\scriptsize\anotheraddressname}}
 \Put(12,65){\makebox(0,0)[lt]{\small 〒 \@anotherpostalcode}}
-\Put(0,73){\makebox(151,8)[cb]{\@anotheraddress}}
+\Put(20,73){\makebox(151,8)[lb]{\@anotheraddress}}
 \Put(0,75){\line(1,0){151}}
 \Put(1,76){\makebox(0,0)[tl]{\scriptsize\contactname}}
-\Put(0,82){\makebox(151,8)[bl]{\@anotherphone}}
+\Put(5,82){\makebox(151,8)[bl]{\@anotherphone}}
 
 %% 学歴・職歴
 \MoveTo(0,85)
 \thicklines
 \Put(0,0){\line(1,0){151}}
-\Put(151,0){\line(0,-1){132}}
-\Put(0,0){\line(0,-1){132}}
-\Put(0,132){\line(1,0){151}}
+\Put(151,0){\line(0,-1){139}}
+\Put(0,0){\line(0,-1){139}}
+\Put(0,139){\line(1,0){151}}
 
 \thinlines
-\Put(0,132){\dashbox{.5}(17,132){}}
-\Put(26,0){\line(0,-1){132}}
-\Put(0,5){\line(1,0){151}}
-\Put(0,5){\makebox(17,5)[c]{\scriptsize 年}}
-\Put(17,5){\makebox(9,5)[c]{\scriptsize 月}}
-\Put(26,5){\makebox(125,5)[c]{\scriptsize\backgroundname}}
-\@tempcnta=12
-\@whilenum\@tempcnta<128\do{
-  \Put(0,\the\@tempcnta){\line(1,0){151}}
+\Put(0,139){\dashbox{.5}(17,139){}}
+\Put(26,0){\line(0,-1){139}}
+\Put(0,6){\line(1,0){151}}
+\Put(0,6){\makebox(17,6)[c]{\scriptsize 年}}
+\Put(17,6){\makebox(9,6)[c]{\scriptsize 月}}
+\Put(26,6){\makebox(125,6)[c]{\small\backgroundname}}
+\@tempcnta=6
+\@whilenum\@tempcnta<133\do{
   \advance\@tempcnta by 7
+  \Put(0,\the\@tempcnta){\line(1,0){151}}
 }
-\@starttoc{lob}
-\@starttoc{loc}
+\@starttoc{lob} % list of background
+\@starttoc{loc} % list of career
 
 \end{picture}
 \clearpage
@@ -187,78 +187,83 @@
 \MoveTo(0,0)
 \thicklines
 \Put(0,0){\line(1,0){151}}
-\Put(0,0){\line(0,-1){222}}
-\Put(151,0){\line(0,-1){222}}
-\Put(0,222){\line(1,0){151}}
+\Put(0,0){\line(0,-1){224}}
+\Put(151,0){\line(0,-1){224}}
+\Put(0,224){\line(1,0){151}}
 
-\Put(0,75){\line(1,0){151}}
-\Put(0,163){\line(1,0){151}}
-\Put(0,191){\line(1,0){151}}
-\Put(0,200){\line(1,0){151}}
+\Put(0,76){\line(1,0){151}}
+\Put(0,166){\line(1,0){151}}
+\Put(0,195){\line(1,0){151}}
+\Put(0,204){\line(1,0){151}}
 
 %% 免許・資格
 \MoveTo(0,0)
 \thinlines
-\Put(0,75){\dashbox{.5}(17,75){}}
-\Put(26,0){\line(0,-1){75}}
-\Put(0,5){\makebox(17,5)[c]{\scriptsize 年}}
-\Put(17,5){\makebox(9,5)[c]{\scriptsize 月}}
-\Put(26,5){\makebox(125,5)[c]{\scriptsize\licensename}}
-\Put(0,5){\line(1,0){151}}
-\@tempcnta=12
-\@whilenum\@tempcnta<82\do{
-  \Put(0,\@tempcnta){\line(1,0){151}}
+\Put(0,76){\dashbox{.5}(17,76){}}
+\Put(26,0){\line(0,-1){76}}
+\Put(0,6){\makebox(17,6)[c]{\scriptsize 年}}
+\Put(17,6){\makebox(9,6)[c]{\scriptsize 月}}
+\Put(26,6){\makebox(125,6)[c]{\small\licensename}}
+\Put(0,6){\line(1,0){151}}
+\@tempcnta=6
+\@whilenum\@tempcnta<70\do{
   \advance\@tempcnta by 7
+  \Put(0,\@tempcnta){\line(1,0){151}}
 }
-\@starttoc{lol}
+\@starttoc{lol} % list of licenses
 
 %% 得意科目
-\Put(75,75){\line(0,-1){58}}
-\Put(1,104){\makebox(75,28)[lt]{\scriptsize\subjectname}}
+\Put(75,76){\line(0,-1){56}}
+\Put(1,104){\makebox(75,27)[lt]{\scriptsize\subjectname}}
 \Put(1,104){\makebox(75,24){\@subject}}
 %% 自己分析
-\Put(76,104){\makebox(75,28)[lt]{\scriptsize\selfintroname}}
+\Put(76,104){\makebox(75,27)[lt]{\scriptsize\selfintroname}}
 \Put(76,104){\makebox(75,24)[c]{\@selfintro}}
 \Put(0,104){\line(1,0){151}}
 %% 趣味
-\Put(1,133){\makebox(75,28)[lt]{\scriptsize\hobbyname}}
-\Put(1,133){\makebox(75,24){\@hobby}}
+\Put(1,132){\makebox(75,27)[lt]{\scriptsize\hobbyname}}
+\Put(1,132){\makebox(75,24){\@hobby}}
 %% 特技
-\Put(76,133){\makebox(75,28)[lt]{\scriptsize\profname}}
-\Put(76,133){\makebox(75,24){\@prof}}
-\Put(0,133){\line(1,0){151}}
+\Put(76,132){\makebox(75,27)[lt]{\scriptsize\profname}}
+\Put(76,132){\makebox(75,24){\@prof}}
+\Put(0,132){\line(1,0){151}}
 %% 動機
-\Put(1,163){\makebox(150,29)[lt]{\scriptsize\motivename}}
-\Put(1,163){\makebox(150,24){\@motive}}
+\Put(1,163){\makebox(150,30)[lt]{\scriptsize\motivename}}
+\Put(1,163){\makebox(150,26){\@motive}}
 %% 本人希望
-\Put(1,191){\makebox(150,27)[tl]{\scriptsize\wishname}}
-\Put(1,191){\makebox(150,22){\@wish}}
-%% 通勤字間
-\Put(1,200){\makebox(47,8)[lt]{\scriptsize\commutename}}
-\Put(1,200){\makebox(45,8)[r]{\@commute}}
-\Put(48,191){\line(0,-1){9}}
+\Put(1,194){\makebox(150,27)[tl]{\scriptsize\wishname}}
+\Put(1,194){\makebox(150,24){\@wish}}
+%% 通勤時間
+\Put(1,204){\makebox(47,8)[lt]{\scriptsize\commutename}}
+\Put(1,204){\makebox(45,8)[r]{\@commute}}
+\Put(48,195){\line(0,-1){9}}
 %% 扶養家族
-\Put(49,200){\makebox(34,8)[lt]{\scriptsize\dependentsname}}
-\Put(49,200){\makebox(31,8)[r]{\@dependents}}
-\Put(84,191){\line(0,-1){9}}
+\Put(49,204){\makebox(34,8)[lt]{\scriptsize\dependentsname}}
+\Put(49,204){\makebox(31,8)[r]{\@dependents}}
+\Put(84,195){\line(0,-1){9}}
 %% 配偶者
-\Put(85,200){\makebox(34,8)[lt]{\scriptsize\matename}}
-\Put(85,200){\makebox(31,8)[r]{\@mate}}
-\Put(117,191){\line(0,-1){9}}
+\Put(85,204){\makebox(34,8)[lt]{\scriptsize\matename}}
+\Put(85,204){\makebox(31,8)[r]{\@mate}}
+\Put(117,195){\line(0,-1){9}}
 %% 配偶者の扶養義務
-\Put(118,200){\makebox(33,8)[lt]{\scriptsize\matedependencename}}
-\Put(118,200){\makebox(32,8)[r]{\@matedependence}}
+\Put(118,204){\makebox(33,8)[lt]{\scriptsize\matedependencename}}
+\Put(118,204){\makebox(32,8)[r]{\@matedependence}}
 %% 保護者
-\Put(0,208){\dashbox{.5}(125,8){}}
-\Put(1,208){\makebox(124,7)[lt]{\scriptsize\guardianname}}
-\Put(1,207){\makebox(124,7)[lb]{\scriptsize\kananame}}
-\Put(35,208){\line(0,-1){14}}
-\Put(1,222){\makebox(34,13)[lt]{\scriptsize\namename}}
-\Put(35,222){\makebox(91,13)[lt]{\small 〒 \@guardianpostalcode}}
-\Put(1,222){\makebox(0,0)[lt]{\@guardian}}
-\Put(125,200){\line(0,-1){22}}
-\Put(126,222){\makebox(25,21)[lt]{\scriptsize\contactname}}
-\Put(126,222){\makebox(25,16)[lt]{\@guardianphone}}
+\Put(0,212){\dashbox{.5}(151,8){}}
+\Put(1,212){\makebox(124,7)[lt]{\scriptsize\guardianname}}
+\Put(1,212){\makebox(124,5)[l]{\scriptsize\kananame}}
+\Put(35,212){\line(0,-1){12}}
+\Put(1,224){\makebox(34,11)[lt]{\scriptsize\namename}}
+\Put(16,212){\makebox(0,5)[l]{\scriptsize\kana@guardian}}
+\Put(1,224){\makebox(34,12)[c]{\@guardian}}
+\Put(36,224){\makebox(89,11)[lt]{\small 〒 \@guardianpostalcode}}
+\Put(48,212){\makebox(77,5)[l]{\scriptsize\kana@guardianaddress}}
+\Put(36,224){\makebox(89,8)[c]{\@guardianaddress}}
+\Put(150,224){\makebox(0,11)[rt]{\scriptsize\@guardianphone}}
+%% 再生紙 表示
+\if@recycledpaper
+  \Put(150,225){\makebox(0,0)[rt]{\scriptsize\recycledpapernote}}
+\fi
 \end{picture}
 }
 
@@ -295,15 +300,15 @@
 
 %% 郵便番号
 \newcommand\@postalcode\@empty
-\newcommand{\postalcode}[1]{\def\@postalcode{#1}}
+\newcommand{\postalcode}[1]{\def\@postalcode{\texttt{#1}}}
 
 %% 電話番号
 \newcommand\@phone\@empty
-\newcommand{\phone}[1]{\def\@phone{\hskip 24pt\textsc{Tel}: #1}}
+\newcommand{\phone}[1]{\def\@phone{\hskip 24pt 電話: \texttt{#1}}}
 
 %% 電子メール
 \newcommand\@email\@empty
-\newcommand{\email}[1]{\def\@email{\hskip 24pt\textsc{Email}: \texttt{#1}}}
+\newcommand{\email}[1]{\def\@email{\hskip 24pt メール: \texttt{#1}}}
 
 %% 連絡先住所
 \newcommand\@anotheraddress\@empty
@@ -316,14 +321,15 @@
 
 %% 連絡先郵便番号
 \newcommand\@anotherpostalcode\@empty
-\newcommand{\anotherpostalcode}[1]{\def\@anotherpostalcode{#1}}
+\newcommand{\anotherpostalcode}[1]{\def\@anotherpostalcode{\texttt{#1}}}
 
 %% 連絡先電話番号
 \newcommand\@anotherphone\@empty
-\newcommand{\anotherphone}[1]{\def\@anotherphone{\hskip 24pt\textsc{Tel}: #1}}
+\newcommand{\anotherphone}[1]{%
+  \def\@anotherphone{\hskip 24pt 電話: \texttt{#1}}}
 
 %% 生年月日
-\newcommand{\@birthday}{}
+\newcommand{\@birthday}\@empty
 \newcommand{\birthday}[3]{\def\@birthday{#1年#2月#3日生}}
 
 %% 年齢
@@ -335,60 +341,77 @@
 \newcommand{\sex}[1]{\def\@sex{#1}}
 
 %% 得意科目
-\newcommand{\@subject}{}
+\newcommand{\@subject}\@empty
 \newcommand{\subject}[1]{\long\def\@subject{\parbox{72mm}{#1}}}
 
 %% 自己分析
-\newcommand{\@selfintro}{}
+\newcommand{\@selfintro}\@empty
 \newcommand{\selfintro}[1]{\long\def\@selfintro{\parbox{72mm}{#1}}}
 
 %% 趣味
-\newcommand{\@hobby}{}
+\newcommand{\@hobby}\@empty
 \newcommand{\hobby}[1]{\long\def\@hobby{\parbox{72mm}{#1}}}
 
 %% 特技
-\newcommand{\@prof}{}
+\newcommand{\@prof}\@empty
 \newcommand{\prof}[1]{\long\def\@prof{\parbox{72mm}{#1}}}
 
 %% 志望動機
-\newcommand{\@motive}{}
+\newcommand{\@motive}\@empty
 \newcommand{\motive}[1]{\long\def\@motive{\parbox{145mm}{#1}}}
 
 %% 本人希望
-\newcommand{\@wish}{}
-\newcommand{\wish}[1]{\long\def\@wish{\parbox{72mm}{#1}}}
+\newcommand{\@wish}\@empty
+\newcommand{\wish}[1]{\long\def\@wish{\parbox{145mm}{#1}}}
 
 %% 通勤時間
-\newcommand{\@commute}{}
+\newcommand{\@commute}\@empty
 \newcommand{\commute}[1]{\def\@commute{#1}}
 
 %% 扶養家族
-\newcommand{\@dependents}{}
+\newcommand{\@dependents}\@empty
 \newcommand{\dependents}[1]{\def\@dependents{#1}}
 
 %% 配偶者
-\newcommand{\@mate}{}
+\newcommand{\@mate}\@empty
 \newcommand{\mate}[1]{\def\@mate{#1}}
 
 %% 配偶者の扶養義務
-\newcommand{\@matedependence}{}
+\newcommand{\@matedependence}\@empty
 \newcommand{\matedependence}[1]{\def\@matedependence{#1}}
 
 %% 保護者
-\newcommand{\@guardian}{}
-\newcommand{\guardian}[1]{\def\@guardian{#1}}
+\newcommand\@guardian\@empty
+\newcommand\kana@guardian\@empty
+\newcommand{\guardian}{\@testopt{\gu@rdi@n}{}}
+\def\gu@rdi@n[#1]#2{%
+  \def\@guardian{#2}
+  \def\kana@guardian{#1}
+}
 
 %% 保護者郵便番号
-\newcommand{\@guardianpostalcode}{}
-\newcommand{\guardianpostalcode}[1]{\def\@guardianpostalcode{#1}}
+\newcommand{\@guardianpostalcode}\@empty
+\newcommand{\guardianpostalcode}[1]{\def\@guardianpostalcode{\texttt{#1}}}
 
 %% 保護者住所
-\newcommand{\@guardianaddress}{}
-\newcommand{\guardianaddress}[1]{\def\@guardianaddress{#1}}
+\newcommand\@guardianaddress\@empty
+\newcommand\kana@guardianaddress\@empty
+\newcommand{\guardianaddress}{\@testopt{\gu@rdi@n@ddress}{}}
+\def\gu@rdi@n@ddress[#1]#2{%
+  \def\@guardianaddress{#2}
+  \def\kana@guardianaddress{#1}
+}
 
 %% 保護者電話番号
-\newcommand{\@guardianphone}{}
-\newcommand{\guardianphone}[1]{\def\@guardianphone{#1}}
+\newcommand{\@guardianphone}\@empty
+\newcommand{\guardianphone}[1]{%
+  \def\@guardianphone{(電話: \texttt{#1})}}
+
+%% 再生紙利用 表示
+\newif\if@recycledpaper
+\@recycledpaperfalse
+\newcommand{\recycledpaper}{\@recycledpapertrue}
+
 
 %% リスト出力用コマンド
 %% #1: y 座標
@@ -402,7 +425,7 @@
 }
 
 %% 学歴リスト追加
-\newcounter{@b}\setcounter{@b}{5}
+\newcounter{@b}\setcounter{@b}{6}
 \newcommand{\background}[3]{%
   \addtocounter{@b}{7}
   \addtocontents{lob}{\protect\PutListEntry{\the@b}{#1}{#2}{#3}}
@@ -419,7 +442,7 @@
 }
 
 %% 資格・免許リスト追加
-\newcounter{@l}\setcounter{@l}{5}
+\newcounter{@l}\setcounter{@l}{6}
 \newcommand{\license}[3]{%
   \addtocounter{@l}{7}
   \addtocontents{lol}{\protect\PutListEntry{\the@l}{#1}{#2}{#3}}
@@ -462,6 +485,7 @@
 \let\保護者郵便番号\guardianpostalcode\relax
 \let\保護者住所=\guardianaddress\relax
 \let\保護者電話番号=\guardianphone\relax
+\let\再生紙\recycledpaper\relax
 
 %% 項目名
 \newcommand{\historyname}{履歴書}
@@ -486,14 +510,14 @@
 \newcommand{\dependentsname}{扶養家族数}
 \newcommand{\matename}{配偶者}
 \newcommand{\matedependencename}{配偶者の扶養義務}
-
+\newcommand{\recycledpapernote}{この用紙には再生紙を利用しています。}
 %% フック コマンドの登録
 \AtBeginDocument{\pagestyle{empty}}
 \AtBeginDocument{\background{}{}{\textbf{\hfil 学歴}}}
 \AtBeginDocument{\career{}{}{\textbf{\hfil 職歴}}\@careertrue}
 
 \AtEndDocument{\addtocontents{lob}{\protect\RMoveTo(0,\the@b)}}
-\AtEndDocument{\if@career\career{}{}{\hfil なし}\fi}
+\AtEndDocument{\if@career\career{}{}{なし}\fi}
 \AtEndDocument{\career{}{}{\hfill 以上\hspace{2em}}}
 \AtEndDocument{\addtocontents{loc}{\protect\RMoveTo(0,-\the@b)}}
 \AtEndDocument{\@makehistory}
