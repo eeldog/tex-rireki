@@ -1,5 +1,5 @@
 %% rireki.cls
-%% $Date: 2002/01/27 08:31:08 $
+%% $Date: 2002/01/28 12:47:18 $
 %%
 %% Copyright (C) 2002 MIYAMOTO Yusuke
 %% All rights reserved.
@@ -338,7 +338,8 @@
   \def\@anotherphone{\hskip 24pt 電話: \texttt{#1}}}
 
 %% 生年月日
-\newcommand{\nengou}[1]{%
+\newcommand{\Nengou}{\protect\@nengou}
+\newcommand{\@nengou}[1]{%
   \@tempcnta=#1
   \ifnum\@tempcnta<1989
     \advance\@tempcnta by -1925
@@ -347,9 +348,9 @@
     \advance\@tempcnta by -1988
     平成
   \fi
-  \ifnum\@tempcnta=1 元\else\the\@tempcnta\fi
+  \ifnum\@tempcnta=1 元 \else \the\@tempcnta \fi
 }
-\let\年号=\nengou\relax
+\let\年号=\Nengou\relax
 \newcounter{birth@year}
 \newcounter{birth@month}
 \newcounter{birth@day}
@@ -367,7 +368,7 @@
     \fi
   \else\ifnum\month<\thebirth@month
     \addtocounter{@ge}{-1}
-  \fi
+  \fi\fi
   \def\@birthday{\年号\thebirth@year 年 \thebirth@month 月 \thebirth@day 日生}
 }
 
