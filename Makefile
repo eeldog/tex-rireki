@@ -2,10 +2,11 @@ BASENAME = sample
 
 TEX    = platex -interaction scrollmode
 DVIPS  = dvips -q -f -t b5
+DVIPDF = dvipdfm -p b5
 PSTOPS = pstops -q '2:0L(25.7cm,0)+1L(25.7cm,18.1cm)'
 
 .SUFFIXES:
-.SUFFIXES: .tex .dvi .ps
+.SUFFIXES: .tex .dvi .ps .pdf
 
 .tex.dvi:
 	$(TEX) $<
@@ -24,8 +25,11 @@ PSTOPS = pstops -q '2:0L(25.7cm,0)+1L(25.7cm,18.1cm)'
 	    {print} \
 	' > $@
 
+.dvi.pdf:
+	-$(DVIPDF) $<
 
-all: $(BASENAME).ps
+
+all: $(BASENAME).ps $(BASENAME).pdf
 
 $(BASENAME).dvi: $(BASENAME).tex
 $(BASENAME).ps: $(BASENAME).dvi
@@ -40,6 +44,6 @@ clean:
 	rm -f $(BASENAME).aux $(BASENAME).lo?
 
 distclean: clean
-	rm -f $(BASENAME).ps $(BASENAME).dvi
+	rm -f $(BASENAME).pdf $(BASENAME).ps $(BASENAME).dvi
 
 PHONY: clean distclean view print

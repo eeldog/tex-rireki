@@ -8,39 +8,39 @@
 \ProvidesClass{rireki}
 \ProcessOptions
 \LoadClass[twoside,11pt]{jarticle}
-%% ÍÑ»æ¥µ¥¤¥º (B5)
+%% $BMQ;f%5%$%:(B (B5)
 \setlength{\paperwidth}{181mm}
 \setlength{\paperheight}{257mm}
 \@settopoint{\paperwidth}
 \@settopoint{\paperheight}
 
-%% ÍÑ»æº¸¾å¤ò¸¶ÅÀ¤È¤¹¤ë
+%% $BMQ;f:8>e$r86E@$H$9$k(B
 \setlength{\voffset}{-1in}
 \setlength{\hoffset}{-1in}
 
-%% ËµÃí¤òºï½ü
+%% $BK5Cm$r:o=|(B
 \setlength{\marginparsep}{0pt}
 \setlength{\marginparwidth}{0pt}
 \setlength{\marginparpush}{0pt}
 
-%% º¸¥Þ¡¼¥¸¥ó
+%% $B:8%^!<%8%s(B
 \setlength{\oddsidemargin}{20mm}
 \setlength{\evensidemargin}{10.5mm}
 \@settopoint{\oddsidemargin}
 \@settopoint{\evensidemargin}
 
-%% ¾å¥Þ¡¼¥¸¥ó
+%% $B>e%^!<%8%s(B
 \setlength{\headheight}{\z@}
 \setlength{\headsep}{\z@}
 \setlength{\topsep}{\z@}
 \setlength{\topmargin}{16mm}
 \@settopoint{\topmargin}
 
-%% µÓÃíÎÎ°è¤òºï½ü
+%% $B5SCmNN0h$r:o=|(B
 \setlength{\footnotesep}{\z@}
 \setlength{\footskip}{\z@}
 
-%% ¥Æ¥­¥¹¥ÈÎÎ°è
+%% $B%F%-%9%HNN0h(B
 \setlength{\textwidth}{\paperwidth}
 \addtolength{\textwidth}{-\oddsidemargin}
 \addtolength{\textwidth}{-\evensidemargin}
@@ -49,8 +49,8 @@
 \addtolength{\textheight}{-2\topmargin}
 \@settopoint{\textheight}
 
-%% picture ÉÁ²è¥³¥Þ¥ó¥É
-%% ºÂÉ¸¤Î°ÜÆ°
+%% picture $BIA2h%3%^%s%I(B
+%% $B:BI8$N0\F0(B
 \newcommand{\@x}{0}
 \newcommand{\@y}{0}
 \newcounter{pic@x}
@@ -65,7 +65,7 @@
   \xdef\@y{\the\@tempcnta}
 }
 
-%% º¸¾å¤ò¸¶ÅÀ¤È¤¹¤ëºÂÉ¸·Ï¤Ë¤ª¤±¤ëÁêÂÐ»²¾È¤Ç \put
+%% $B:8>e$r86E@$H$9$k:BI87O$K$*$1$kAjBP;2>H$G(B \put
 \def\Put(#1,#2){%
   \setcounter{pic@x}{\@x}
   \setcounter{pic@y}{\pic@height}
@@ -84,7 +84,7 @@
   \multiput(\thepic@x,\thepic@y)(#3,-#4)%
 }
 
-%% ÍúÎò½ñ¤òºîÀ®¤¹¤ë¥³¥Þ¥ó¥É¡¥\end{document} ¤Ç¼Â¹Ô¤µ¤ì¤ë¡¥
+%% $BMzNr=q$r:n@.$9$k%3%^%s%I!%(B\end{document} $B$G<B9T$5$l$k!%(B
 \newcommand{\@makerireki}{%
 \setlength\unitlength{1mm}
 \@tempcnta=\number\textwidth
@@ -94,23 +94,23 @@
 \divide\@tempcnta by \number\unitlength
 \edef\pic@height{\the\@tempcnta}
 
-%% picture ´Ä¶­
+%% picture $B4D6-(B
 \noindent
 \begin{picture}(\pic@width,\pic@height)
 
-%% ¥¿¥¤¥È¥ë¡¤¼Ì¿¿°ÌÃÖ
+%% $B%?%$%H%k!$<L??0LCV(B
 \MoveTo(0,0)
 \Put(0,0){\Large\bfseries\kanjiskip=5mm\historyname}
-\Put(100,2){\makebox(0,5)[rc]{\scriptsize\@date ¸½ºß}}
+\Put(100,2){\makebox(0,5)[rc]{\scriptsize\@date $B8=:_(B}}
 \Put(105,31){\dashbox{0.5}(28,38)[c]{\scriptsize %
-  \shortstack[c]{¼Ì¿¿¤òÅ½¤ë°ÌÃÖ\\½Ä 36 ¡Á 40 mm\\²£ 24 ¡Á 30 mm}}}
+  \shortstack[c]{$B<L??$rE=$k0LCV(B\\$B=D(B 36 $B!A(B 40 mm\\$B2#(B 24 $B!A(B 30 mm}}}
 \@tempcnta=\number\paperheight
 \divide\@tempcnta by 2
 \advance\@tempcnta by -\number\topmargin
 \divide\@tempcnta by \unitlength
 \Put(-16,\the\@tempcnta){$\triangleleft$}
 
-%% »áÌ¾¡¤¸½½»½ê¤Ê¤É¤Î¥×¥í¥Õ¥¡¥¤¥ë
+%% $B;aL>!$8==;=j$J$I$N%W%m%U%!%$%k(B
 \MoveTo(0,0)
 \thicklines
 \Put(0,2){\line(1,0){100}}
@@ -129,18 +129,18 @@
 \Put(42,24){\makebox(42,16)[l]{\LARGE\kanjiskip=3mm\hspace{12pt}\@forename}}
 \Put(42,7){\makebox(42,5)[l]{\scriptsize\hspace{12pt}\kana@forename}}
 \Put(87,2){\line(0,-1){22}}
-\Put(88,24){\makebox(12,16)[tl]{\tiny °õ}}
+\Put(88,24){\makebox(12,16)[tl]{\tiny $B0u(B}}
 \Put(88,7){\makebox(12,5)[c]{\scriptsize\sexname\hskip 1ex\@sex}}
 
 \Put(0,34){\makebox(100,10)[l]{\scriptsize\hspace{1ex}\birthdayname}}
 \Put(0,34){\makebox(100,10)[r]{\@birthday\hskip 2em
-    (Ëþ\hbox to 2em{\hfil\@age\hfil}ºÐ)\hspace{1em}}}
+    ($BK~(B\hbox to 2em{\hfil\@age\hfil}$B:P(B)\hspace{1em}}}
 \Put(0,34){\line(1,0){100}}
 
 \Put(0,39){\dashbox{.5}(151,5)[l]{\hspace{1mm}\scriptsize\kananame}}
 \Put(20,38){\makebox(0,0)[lb]{\scriptsize\kana@address}}
 \Put(1,40){\makebox(0,0)[tl]{\scriptsize\addressname}}
-\Put(12,40){\makebox(0,0)[lt]{\small ¢© \@postalcode}}
+\Put(12,40){\makebox(0,0)[lt]{\small $B")(B \@postalcode}}
 \Put(20,48){\makebox(148,5)[lb]{\@address}}
 \Put(0,50){\line(1,0){151}}
 \Put(1,51){\makebox(0,0)[tl]{\scriptsize\contactname}}
@@ -149,13 +149,13 @@
 \Put(0,61){\dashbox{.5}(151,5)[l]{\hspace{1mm}\scriptsize\kananame}}
 \Put(20,61){\makebox(0,5)[l]{\scriptsize\kana@anotheraddress}}
 \Put(1,62){\makebox(0,0)[tl]{\scriptsize\anotheraddressname}}
-\Put(12,62){\makebox(0,0)[lt]{\small ¢© \@anotherpostalcode}}
+\Put(12,62){\makebox(0,0)[lt]{\small $B")(B \@anotherpostalcode}}
 \Put(20,70){\makebox(151,8)[lb]{\@anotheraddress}}
 \Put(0,72){\line(1,0){151}}
 \Put(1,78){\makebox(0,5)[tl]{\scriptsize\contactname}}
 \Put(5,78){\makebox(151,6)[l]{\small\@anotherphone}}
 
-%% ³ØÎò¡¦¿¦Îò
+%% $B3XNr!&?&Nr(B
 \MoveTo(0,79)
 \thicklines
 \Put(0,0){\line(1,0){151}}
@@ -167,8 +167,8 @@
 \Put(0,145){\dashbox{.5}(17,145){}}
 \Put(26,0){\line(0,-1){145}}
 \Put(0,5){\line(1,0){151}}
-\Put(0,5){\makebox(17,5)[c]{\scriptsize Ç¯}}
-\Put(17,5){\makebox(9,5)[c]{\scriptsize ·î}}
+\Put(0,5){\makebox(17,5)[c]{\scriptsize $BG/(B}}
+\Put(17,5){\makebox(9,5)[c]{\scriptsize $B7n(B}}
 \Put(26,5){\makebox(125,5)[c]{\scriptsize\backgroundname}}
 
 \MultiPut(0,5)(0,7){20}{\line(1,0){151}}
@@ -180,7 +180,7 @@
 \end{picture}
 \clearpage
 
-%% ±¦¥Ú¡¼¥¸
+%% $B1&%Z!<%8(B
 \begin{picture}(\pic@width, \pic@height)
 
 \MoveTo(0,0)
@@ -195,56 +195,56 @@
 \Put(0,194){\line(1,0){151}}
 \Put(0,203){\line(1,0){151}}
 
-%% ÌÈµö¡¦»ñ³Ê
+%% $BLH5v!&;q3J(B
 \MoveTo(0,0)
 \thinlines
 \Put(0,75){\dashbox{.5}(17,75){}}
 \Put(26,0){\line(0,-1){75}}
-\Put(0,5){\makebox(17,5)[c]{\scriptsize Ç¯}}
-\Put(17,5){\makebox(9,5)[c]{\scriptsize ·î}}
+\Put(0,5){\makebox(17,5)[c]{\scriptsize $BG/(B}}
+\Put(17,5){\makebox(9,5)[c]{\scriptsize $B7n(B}}
 \Put(26,5){\makebox(125,5)[c]{\scriptsize\licensename}}
 \Put(0,5){\line(1,0){151}}
 
 \MultiPut(0,5)(0,7){10}{\line(1,0){151}}
 \@starttoc{lol} % list of licenses
 
-%% ÆÀ°Õ²ÊÌÜ
+%% $BF@0U2JL\(B
 \Put(75,75){\line(0,-1){56}}
 \Put(1,103){\makebox(75,27)[lt]{\scriptsize\subjectname}}
 \Put(1,103){\makebox(75,24){\@subject}}
-%% ¼«¸ÊÊ¬ÀÏ
+%% $B<+8JJ,@O(B
 \Put(76,103){\makebox(75,27)[lt]{\scriptsize\selfintroname}}
 \Put(76,103){\makebox(75,24){\@selfintro}}
 \Put(0,103){\line(1,0){151}}
-%% ¼ñÌ£
+%% $B<qL#(B
 \Put(1,131){\makebox(75,27)[lt]{\scriptsize\hobbyname}}
 \Put(1,131){\makebox(75,24){\@hobby}}
-%% ÆÃµ»
+%% $BFC5;(B
 \Put(76,131){\makebox(75,27)[lt]{\scriptsize\profname}}
 \Put(76,131){\makebox(75,24){\@prof}}
 \Put(0,131){\line(1,0){151}}
-%% Æ°µ¡
+%% $BF05!(B
 \Put(1,162){\makebox(150,30)[lt]{\scriptsize\motivename}}
 \Put(1,162){\makebox(150,26){\@motive}}
-%% ËÜ¿Í´õË¾
+%% $BK\?M4uK>(B
 \Put(1,192){\makebox(150,27)[tl]{\scriptsize\wishname}}
 \Put(1,192){\makebox(150,24){\@wish}}
-%% ÄÌ¶Ð»þ´Ö
+%% $BDL6P;~4V(B
 \Put(1,203){\makebox(47,8)[lt]{\scriptsize\commutename}}
 \Put(1,203){\makebox(45,8)[r]{\@commute}}
 \Put(48,194){\line(0,-1){9}}
-%% ÉÞÍÜ²ÈÂ²
+%% $BI^M\2HB2(B
 \Put(49,203){\makebox(34,8)[lt]{\scriptsize\dependentsname}}
 \Put(49,203){\makebox(30,8)[r]{\@dependents}}
 \Put(84,194){\line(0,-1){9}}
-%% ÇÛ¶ö¼Ô
+%% $BG[6v<T(B
 \Put(85,203){\makebox(33,8)[lt]{\scriptsize\matename}}
 \Put(85,203){\makebox(29,8)[r]{\@mate}}
 \Put(116,194){\line(0,-1){9}}
-%% ÇÛ¶ö¼Ô¤ÎÉÞÍÜµÁÌ³
+%% $BG[6v<T$NI^M\5AL3(B
 \Put(117,203){\makebox(34,8)[lt]{\scriptsize\matedependencename}}
 \Put(117,203){\makebox(30,8)[r]{\@matedependence}}
-%% ÊÝ¸î¼Ô
+%% $BJ]8n<T(B
 \Put(0,212){\dashbox{.5}(151,9){}}
 \Put(1,212){\makebox(124,8)[lt]{\scriptsize\guardianname}}
 \Put(1,212){\makebox(124,5)[l]{\scriptsize\kananame}}
@@ -252,7 +252,7 @@
 \Put(1,224){\makebox(34,11)[lt]{\scriptsize\namename}}
 \Put(16,212){\makebox(0,5)[l]{\scriptsize\kana@guardian}}
 \Put(1,224){\makebox(34,12)[c]{\@guardian}}
-\Put(36,224){\makebox(89,11)[lt]{\small ¢© \@guardianpostalcode}}
+\Put(36,224){\makebox(89,11)[lt]{\small $B")(B \@guardianpostalcode}}
 \Put(48,212){\makebox(77,5)[l]{\scriptsize\kana@guardianaddress}}
 \Put(36,224){\makebox(89,8)[c]{\@guardianaddress}}
 \Put(150,224){\makebox(0,11)[rt]{\scriptsize\@guardianphone}}
@@ -262,24 +262,24 @@
 \end{picture}
 }
 
-%% ¥Õ¥Ã¥¯¥Þ¥¯¥íÄêµÁ¥³¥Þ¥ó¥É
+%% $B%U%C%/%^%/%mDj5A%3%^%s%I(B
 \let\@firstpagehook\@empty
 \let\@secondpagehook\@empty
 \newcommand{\AtFirstPage}{\g@addto@macro\@firstpagehook}
 \newcommand{\AtSecondPage}{\g@addto@macro\@secondpagehook}
 
-%%ºÆÀ¸»æ
+%%$B:F@8;f(B
 \newcommand{\RecycledPaper}{%
   \AtSecondPage{\Put(150,225){\makebox(0,0)[rt]{\scriptsize 
-    ¤³¤ÎÍÑ»æ¤Ë¤ÏºÆÀ¸»æ¤òÍøÍÑ¤·¤Æ¤¤¤Þ¤¹¡£}}}
+    $B$3$NMQ;f$K$O:F@8;f$rMxMQ$7$F$$$^$9!#(B}}}
 }
 
 
-%% ÍúÎò½ñ ºîÀ®Æü
+%% $BMzNr=q(B $B:n@.F|(B
 \renewcommand{\@date}{\today}
 \renewcommand{\date}[1]{\edef\@date{#1}}
 
-%% À«
+%% $B@+(B
 \newcommand\@surname\@empty
 \newcommand\kana@surname\@empty
 \newcommand{\SurName}{\@testopt\surn@me{}}
@@ -288,7 +288,7 @@
   \def\kana@surname{#1}
 }
 
-%% Ì¾
+%% $BL>(B
 \newcommand\@forename\@empty
 \newcommand\kana@forename\@empty
 \newcommand{\ForeName}{\@testopt{\foren@me}{}}
@@ -297,7 +297,7 @@
   \def\kana@forename{#1}
 }
 
-%% ¸½½»½ê
+%% $B8==;=j(B
 \newcommand\@address\@empty
 \newcommand\kana@address\@empty
 \newcommand{\Address}{\@testopt{\@ddress}{}}
@@ -306,19 +306,19 @@
   \def\kana@address{#1}
 }
 
-%% Í¹ÊØÈÖ¹æ
+%% $BM9JXHV9f(B
 \newcommand\@postalcode\@empty
 \newcommand{\PostalCode}[1]{\def\@postalcode{\texttt{#1}}}
 
-%% ÅÅÏÃÈÖ¹æ
+%% $BEEOCHV9f(B
 \newcommand\@phone\@empty
-\newcommand{\Phone}[1]{\def\@phone{\hskip 24pt ÅÅÏÃ: \texttt{#1}}}
+\newcommand{\Phone}[1]{\def\@phone{\hskip 24pt $BEEOC(B: \texttt{#1}}}
 
-%% ÅÅ»Ò¥á¡¼¥ë
+%% $BEE;R%a!<%k(B
 \newcommand\@email\@empty
-\newcommand{\Email}[1]{\def\@email{\hskip 24pt ¥á¡¼¥ë: \texttt{#1}}}
+\newcommand{\Email}[1]{\def\@email{\hskip 24pt $B%a!<%k(B: \texttt{#1}}}
 
-%% Ï¢ÍíÀè½»½ê
+%% $BO"Mm@h=;=j(B
 \newcommand\@anotheraddress\@empty
 \newcommand\kana@anotheraddress\@empty
 \newcommand{\AnotherAddress}{\@testopt{\@nother@ddress}{}}
@@ -327,29 +327,29 @@
   \def\kana@anotheraddress{#1}
 }
 
-%% Ï¢ÍíÀèÍ¹ÊØÈÖ¹æ
+%% $BO"Mm@hM9JXHV9f(B
 \newcommand\@anotherpostalcode\@empty
 \newcommand{\AnotherPostalCode}[1]{\def\@anotherpostalcode{\texttt{#1}}}
 
-%% Ï¢ÍíÀèÅÅÏÃÈÖ¹æ
+%% $BO"Mm@hEEOCHV9f(B
 \newcommand\@anotherphone\@empty
 \newcommand{\AnotherPhone}[1]{%
-  \def\@anotherphone{\hskip 24pt ÅÅÏÃ: \texttt{#1}}}
+  \def\@anotherphone{\hskip 24pt $BEEOC(B: \texttt{#1}}}
 
-%% À¸Ç¯·îÆü
+%% $B@8G/7nF|(B
 \newcommand{\Nengou}{\protect\@nengou}
 \newcommand{\@nengou}[1]{%
   \@tempcnta=#1
   \ifnum\@tempcnta<1989
     \advance\@tempcnta by -1925
-    ¾¼ÏÂ
+    $B><OB(B
   \else
     \advance\@tempcnta by -1988
-    Ê¿À®
+    $BJ?@.(B
   \fi
-  \ifnum\@tempcnta=1 ¸µ \else \the\@tempcnta \fi
+  \ifnum\@tempcnta=1 $B85(B \else \the\@tempcnta \fi
 }
-\let\Ç¯¹æ=\Nengou\relax
+\let\$BG/9f(B=\Nengou\relax
 \newcounter{birth@year}
 \newcounter{birth@month}
 \newcounter{birth@day}
@@ -368,58 +368,58 @@
   \else\ifnum\month<\thebirth@month
     \addtocounter{@ge}{-1}
   \fi\fi
-  \def\@birthday{\Ç¯¹æ\thebirth@year Ç¯ \thebirth@month ·î \thebirth@day ÆüÀ¸}
+  \def\@birthday{\$BG/9f(B\thebirth@year $BG/(B \thebirth@month $B7n(B \thebirth@day $BF|@8(B}
 }
 
-%% Ç¯Îð
+%% $BG/Np(B
 \newcommand{\@age}{\expandafter\the@ge}
 \newcommand{\Age}[1]{\def\@age{#1}}
 
-%% À­ÊÌ
+%% $B@-JL(B
 \newcommand{\@sex}{??}
 \newcommand{\Sex}[1]{\def\@sex{#1}}
 
-%% ÆÀ°Õ²ÊÌÜ
+%% $BF@0U2JL\(B
 \newcommand{\@subject}\@empty
 \newcommand{\Subject}[1]{\long\def\@subject{\parbox{72mm}{#1}}}
 
-%% ¼«¸ÊÊ¬ÀÏ
+%% $B<+8JJ,@O(B
 \newcommand{\@selfintro}\@empty
 \newcommand{\SelfIntro}[1]{\long\def\@selfintro{\parbox{72mm}{#1}}}
 
-%% ¼ñÌ£
+%% $B<qL#(B
 \newcommand{\@hobby}\@empty
 \newcommand{\Hobby}[1]{\long\def\@hobby{\parbox{72mm}{#1}}}
 
-%% ÆÃµ»
+%% $BFC5;(B
 \newcommand{\@prof}\@empty
 \newcommand{\Prof}[1]{\long\def\@prof{\parbox{72mm}{#1}}}
 
-%% »ÖË¾Æ°µ¡
+%% $B;VK>F05!(B
 \newcommand{\@motive}\@empty
 \newcommand{\Motive}[1]{\long\def\@motive{\parbox{145mm}{#1}}}
 
-%% ËÜ¿Í´õË¾
+%% $BK\?M4uK>(B
 \newcommand{\@wish}\@empty
 \newcommand{\Wish}[1]{\long\def\@wish{\parbox{145mm}{#1}}}
 
-%% ÄÌ¶Ð»þ´Ö
+%% $BDL6P;~4V(B
 \newcommand{\@commute}\@empty
 \newcommand{\Commute}[1]{\def\@commute{#1}}
 
-%% ÉÞÍÜ²ÈÂ²
+%% $BI^M\2HB2(B
 \newcommand{\@dependents}\@empty
 \newcommand{\Dependents}[1]{\def\@dependents{#1}}
 
-%% ÇÛ¶ö¼Ô
+%% $BG[6v<T(B
 \newcommand{\@mate}\@empty
 \newcommand{\Mate}[1]{\def\@mate{#1}}
 
-%% ÇÛ¶ö¼Ô¤ÎÉÞÍÜµÁÌ³
+%% $BG[6v<T$NI^M\5AL3(B
 \newcommand{\@matedependence}\@empty
 \newcommand{\MateDependence}[1]{\def\@matedependence{#1}}
 
-%% ÊÝ¸î¼Ô
+%% $BJ]8n<T(B
 \newcommand\@guardian\@empty
 \newcommand\kana@guardian\@empty
 \newcommand{\Guardian}{\@testopt{\gu@rdi@n}{}}
@@ -428,11 +428,11 @@
   \def\kana@guardian{#1}
 }
 
-%% ÊÝ¸î¼ÔÍ¹ÊØÈÖ¹æ
+%% $BJ]8n<TM9JXHV9f(B
 \newcommand{\@guardianpostalcode}\@empty
 \newcommand{\GuardianPostalCode}[1]{\def\@guardianpostalcode{\texttt{#1}}}
 
-%% ÊÝ¸î¼Ô½»½ê
+%% $BJ]8n<T=;=j(B
 \newcommand\@guardianaddress\@empty
 \newcommand\kana@guardianaddress\@empty
 \newcommand{\GuardianAddress}{\@testopt{\gu@rdi@n@ddress}{}}
@@ -441,23 +441,23 @@
   \def\kana@guardianaddress{#1}
 }
 
-%% ÊÝ¸î¼ÔÅÅÏÃÈÖ¹æ
+%% $BJ]8n<TEEOCHV9f(B
 \newcommand{\@guardianphone}\@empty
 \newcommand{\GuardianPhone}[1]{%
-  \def\@guardianphone{¡ÊÅÅÏÃ: \texttt{#1}¡Ë}}
+  \def\@guardianphone{$B!JEEOC(B: \texttt{#1}$B!K(B}}
 
-%% ¥ê¥¹¥È½ÐÎÏÍÑ¥³¥Þ¥ó¥É
-%% #1: y ºÂÉ¸
-%% #2: Ç¯
-%% #3: ·î
-%% #4: ÆâÍÆ
+%% $B%j%9%H=PNOMQ%3%^%s%I(B
+%% #1: y $B:BI8(B
+%% #2: $BG/(B
+%% #3: $B7n(B
+%% #4: $BFbMF(B
 \newcommand{\PutListEntry}[4]{
   \Put(0,#1){\makebox(17,7)[c]{#2}}
   \Put(17,#1){\makebox(9,7)[c]{#3}}
   \Put(28,#1){\makebox(121,7)[l]{#4}}
 }
 
-%% ³ØÎò¥ê¥¹¥ÈÄÉ²Ã
+%% $B3XNr%j%9%HDI2C(B
 \newcounter{@b}\setcounter{@b}{5}
 \newcommand{\Background}[3]{%
   \addtocounter{@b}{7}
@@ -467,7 +467,7 @@
 \@bglastnewlinefalse
 \newcommand{\BackgroundLastNewLine}{\@bglastnewlinetrue}
 
-%% ¿¦Îò¥ê¥¹¥ÈÄÉ²Ã
+%% $B?&Nr%j%9%HDI2C(B
 \newcounter{@c}\setcounter{@c}{0}
 \newif\if@career
 \@careertrue
@@ -477,87 +477,87 @@
   \addtocontents{loc}{\protect\PutListEntry{\the@c}{#1}{#2}{#3}}
 }
 
-%% »ñ³Ê¡¦ÌÈµö¥ê¥¹¥ÈÄÉ²Ã
+%% $B;q3J!&LH5v%j%9%HDI2C(B
 \newcounter{@l}\setcounter{@l}{5}
 \newcommand{\License}[3]{%
   \addtocounter{@l}{7}
   \addtocontents{lol}{\protect\PutListEntry{\the@l}{#1}{#2}{#3}}
 }
 
-%% ¥³¥Þ¥ó¥É¤ÎÊÌÌ¾
-\let\ºÆÀ¸»æ=\RecycledPaper\relax
-\let\ÆüÉÕ=\date\relax
-\let\À«=\SurName\relax
-\let\Ì¾=\ForeName\relax
-\let\À­ÊÌ=\Sex\relax
-\let\Ç¯Îá=\Age\relax
-\let\Ç¯Îð=\Age\relax
-\let\À¸Ç¯·îÆü=\Birthday\relax
-\let\ÃÂÀ¸Æü=\Birthday\relax
-\let\Í¹ÊØÈÖ¹æ\PostalCode\relax
-\let\¸½½»½ê=\Address\relax
-\let\ÅÅÏÃÈÖ¹æ=\Phone\relax
-\def\¥á¡¼¥ë{\Email}
-\def\ÅÅ»Ò¥á¡¼¥ë{\Email}
-\let\Ï¢ÍíÀèÍ¹ÊØÈÖ¹æ\AnotherPostalCode\relax
-\let\Ï¢ÍíÀè½»½ê=\AnotherAddress\relax
-\let\Ï¢ÍíÀèÅÅÏÃÈÖ¹æ=\AnotherPhone\relax
-\let\³ØÎò=\Background\relax
-\let\¿¦Îò=\Career\relax
-\let\»ñ³Ê=\License\relax
-\let\ÌÈµö=\License\relax
+%% $B%3%^%s%I$NJLL>(B
+\let\$B:F@8;f(B=\RecycledPaper\relax
+\let\$BF|IU(B=\date\relax
+\let\$B@+(B=\SurName\relax
+\let\$BL>(B=\ForeName\relax
+\let\$B@-JL(B=\Sex\relax
+\let\$BG/Na(B=\Age\relax
+\let\$BG/Np(B=\Age\relax
+\let\$B@8G/7nF|(B=\Birthday\relax
+\let\$BCB@8F|(B=\Birthday\relax
+\let\$BM9JXHV9f(B\PostalCode\relax
+\let\$B8==;=j(B=\Address\relax
+\let\$BEEOCHV9f(B=\Phone\relax
+\def\$B%a!<%k(B{\Email}
+\def\$BEE;R%a!<%k(B{\Email}
+\let\$BO"Mm@hM9JXHV9f(B\AnotherPostalCode\relax
+\let\$BO"Mm@h=;=j(B=\AnotherAddress\relax
+\let\$BO"Mm@hEEOCHV9f(B=\AnotherPhone\relax
+\let\$B3XNr(B=\Background\relax
+\let\$B?&Nr(B=\Career\relax
+\let\$B;q3J(B=\License\relax
+\let\$BLH5v(B=\License\relax
 \let\Licence=\License\relax
-\let\ÆÀ°Õ²ÊÌÜ=\Subject\relax
-\let\¼«¸ÊÊ¬ÀÏ=\SelfIntro\relax
-\let\¼ñÌ£=\Hobby\relax
-\let\ÆÃµ»=\Prof\relax
-\let\Æ°µ¡=\Motive\relax
-\let\»ÖË¾Æ°µ¡=\Motive\relax
-\let\´õË¾=\Wish\relax
-\let\ËÜ¿Í´õË¾=\Wish\relax
-\let\ÄÌ¶Ð»þ´Ö=\Commute\relax
-\let\ÉÞÍÜ²ÈÂ²=\Dependents\relax
-\let\ÇÛ¶ö¼Ô=\Mate\relax
-\let\ÇÛ¶ö¼ÔÉÞÍÜµÁÌ³=\MateDependence\relax
-\let\ÊÝ¸î¼Ô=\Guardian\relax
-\let\ÊÝ¸î¼ÔÍ¹ÊØÈÖ¹æ\GuardianPostalCode\relax
-\let\ÊÝ¸î¼Ô½»½ê=\GuardianAddress\relax
-\let\ÊÝ¸î¼ÔÅÅÏÃÈÖ¹æ=\GuardianPhone\relax
-\let\³ØÎò¥ê¥¹¥È¤ÎºÇ¸å¤Ç²þ¹Ô=\BackgroundLastNewLine
+\let\$BF@0U2JL\(B=\Subject\relax
+\let\$B<+8JJ,@O(B=\SelfIntro\relax
+\let\$B<qL#(B=\Hobby\relax
+\let\$BFC5;(B=\Prof\relax
+\let\$BF05!(B=\Motive\relax
+\let\$B;VK>F05!(B=\Motive\relax
+\let\$B4uK>(B=\Wish\relax
+\let\$BK\?M4uK>(B=\Wish\relax
+\let\$BDL6P;~4V(B=\Commute\relax
+\let\$BI^M\2HB2(B=\Dependents\relax
+\let\$BG[6v<T(B=\Mate\relax
+\let\$BG[6v<TI^M\5AL3(B=\MateDependence\relax
+\let\$BJ]8n<T(B=\Guardian\relax
+\let\$BJ]8n<TM9JXHV9f(B\GuardianPostalCode\relax
+\let\$BJ]8n<T=;=j(B=\GuardianAddress\relax
+\let\$BJ]8n<TEEOCHV9f(B=\GuardianPhone\relax
+\let\$B3XNr%j%9%H$N:G8e$G2~9T(B=\BackgroundLastNewLine
 
-%% ¹àÌÜÌ¾
-\newcommand{\historyname}{ÍúÎò½ñ}
-\newcommand{\namename}{»á~~Ì¾}
-\newcommand{\kananame}{¤Õ¤ê¤¬¤Ê}
-\newcommand{\addressname}{¸½~½»~½ê}
-\newcommand{\anotheraddressname}{Ï¢~Íí~Àè}
-\newcommand{\contactname}{ÅÅÏÃ¤Ê¤É}
-\newcommand{\birthdayname}{À¸Ç¯·îÆü}
-\newcommand{\sexname}{À­ÊÌ}
-\newcommand{\backgroundname}{³ØÎò¡¦¿¦Îò}
-\newcommand{\licensename}{ÌÈµö¡¦»ñ³Ê}
-\newcommand{\subjectname}{ÆÀ°Õ¤Ê²ÊÌÜ¡¦Ê¬Ìî}
-\newcommand{\selfintroname}{¼«¸ÊÊ¬ÀÏ¡ÊÀ­³Ê¡¦ÆÃÄ§¡¦PR ¤Ê¤É¡Ë}
-\newcommand{\hobbyname}{¼ñÌ£¡¦¥¹¥Ý¡¼¥Ä¡¦¥µ¡¼¥¯¥ë¤Ê¤É}
-\newcommand{\profname}{ÆÃµ»¤Ê¤É}
-\newcommand{\motivename}{»ÖË¾¤ÎÆ°µ¡}
-\newcommand{\wishname}{ËÜ¿Í´õË¾µ­ÆþÍó¡ÊÆÃ¤ËµëÎÁ¡¦¿¦¼ï¡¦¶ÐÌ³»þ´Ö¡¦¶ÐÌ³ÃÏ¡¦
-  ¤½¤ÎÂ¾¤Ë¤Ä¤¤¤Æ¤Î´õË¾¤Ê¤É¤¬¤¢¤ì¤Ðµ­Æþ¡Ë}
-\newcommand{\guardianname}{ÊÝ¸î¼Ô (ËÜ¿Í¤¬Ì¤À®Ç¯¤Î¾ì¹ç¤Î¤ßµ­Æþ)}
-\newcommand{\commutename}{ÄÌ¶Ð»þ´Ö}
-\newcommand{\dependentsname}{ÉÞÍÜ²ÈÂ²¿ô}
-\newcommand{\matename}{ÇÛ¶ö¼Ô}
-\newcommand{\matedependencename}{ÇÛ¶ö¼Ô¤ÎÉÞÍÜµÁÌ³}
+%% $B9`L\L>(B
+\newcommand{\historyname}{$BMzNr=q(B}
+\newcommand{\namename}{$B;a(B~~$BL>(B}
+\newcommand{\kananame}{$B$U$j$,$J(B}
+\newcommand{\addressname}{$B8=(B~$B=;(B~$B=j(B}
+\newcommand{\anotheraddressname}{$BO"(B~$BMm(B~$B@h(B}
+\newcommand{\contactname}{$BEEOC$J$I(B}
+\newcommand{\birthdayname}{$B@8G/7nF|(B}
+\newcommand{\sexname}{$B@-JL(B}
+\newcommand{\backgroundname}{$B3XNr!&?&Nr(B}
+\newcommand{\licensename}{$BLH5v!&;q3J(B}
+\newcommand{\subjectname}{$BF@0U$J2JL\!&J,Ln(B}
+\newcommand{\selfintroname}{$B<+8JJ,@O!J@-3J!&FCD'!&(BPR $B$J$I!K(B}
+\newcommand{\hobbyname}{$B<qL#!&%9%]!<%D!&%5!<%/%k$J$I(B}
+\newcommand{\profname}{$BFC5;$J$I(B}
+\newcommand{\motivename}{$B;VK>$NF05!(B}
+\newcommand{\wishname}{$BK\?M4uK>5-F~Ms!JFC$K5kNA!&?&<o!&6PL3;~4V!&6PL3CO!&(B
+  $B$=$NB>$K$D$$$F$N4uK>$J$I$,$"$l$P5-F~!K(B}
+\newcommand{\guardianname}{$BJ]8n<T(B ($BK\?M$,L$@.G/$N>l9g$N$_5-F~(B)}
+\newcommand{\commutename}{$BDL6P;~4V(B}
+\newcommand{\dependentsname}{$BI^M\2HB2?t(B}
+\newcommand{\matename}{$BG[6v<T(B}
+\newcommand{\matedependencename}{$BG[6v<T$NI^M\5AL3(B}
 
-%% ¥Õ¥Ã¥¯¥Þ¥¯¥í¤ÎÅÐÏ¿
+%% $B%U%C%/%^%/%m$NEPO?(B
 \AtBeginDocument{\pagestyle{empty}}
-\AtBeginDocument{\Background{}{}{\textbf{\hfil ³ØÎò}}}
-\AtBeginDocument{\Career{}{}{\textbf{\hfil ¿¦Îò}}\@careertrue}
+\AtBeginDocument{\Background{}{}{\textbf{\hfil $B3XNr(B}}}
+\AtBeginDocument{\Career{}{}{\textbf{\hfil $B?&Nr(B}}\@careertrue}
 
 \AtEndDocument{\if@bglastnewline\Background{}{}{}\fi}
 \AtEndDocument{\addtocontents{lob}{\protect\RMoveTo(0,\the@b)}}
-\AtEndDocument{\if@career\Career{}{}{¤Ê¤·}\fi}
-\AtEndDocument{\Career{}{}{\hfill °Ê¾å\hspace{2em}}}
+\AtEndDocument{\if@career\Career{}{}{$B$J$7(B}\fi}
+\AtEndDocument{\Career{}{}{\hfill $B0J>e(B\hspace{2em}}}
 \AtEndDocument{\addtocontents{loc}{\protect\RMoveTo(0,-\the@b)}}
 \AtEndDocument{\@makerireki}
 

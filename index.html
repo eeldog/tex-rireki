@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="ja">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-2022-JP">
+  <meta name="ROBOTS" content="INDEX">
+  <!-- link rel="stylesheet" href="default.css" type="text/css" -->
+  <link rel="home" href="../index.html">
+  <title> 履歴書 LaTeX クラスファイル </title>
+  <style type="text/css"><!--
+    body {
+      color: black;
+      background-color: white;
+      margin: .8in 1in;
+    }
+    h1 {
+      border-bottom: 1pt solid gray;
+      padding: 5pt;
+      text-align: center;
+    }
+    h2 {
+      border-left: 5pt solid gray;
+      background-color: #EEEEEE;
+      padding: 3pt 5pt;
+      margin: 24pt 5pt 12pt;
+    }
+    h3 {
+      text-decoration: underline;
+    }
+    code {
+      font-family: monospace;
+    }
+    var {
+      font-family: sans-serif;
+      font-style: italic;
+    }
+    blockquote {
+      border: 1pt solid;
+      padding: 5pt;
+      color: white;
+      background-color: black;
+    }
+    ul li {
+      margin: 5pt;
+      padding: 2pt;
+      list-style-type: circle;
+      border-bottom: dotted 1pt;
+    }
+    a:link {
+      color: blue;
+      background-color: inherit;
+    }
+    a:hover {
+      background-color: lightblue;
+    }
+    a:visited {
+      color: darkblue;
+    }
+    p {
+      margin-left: 12pt;
+    }
+    address {
+      font-style: normal;
+      font-family: monospace;
+    }
+  --></style>
+</head>
+<body>
+
+<h1> 履歴書 LaTeX クラスファイル</h1>
+
+<h2>トクチョウ。</h2>
+<ul>
+  <li> LaTeX 2&epsilon; に対応 </li>
+  <li> 簡単な入力で，それなりの出力を実現 </li>
+  <li> 生年月日から年齢の自動計算，和歴元号の切替え </li>
+  <li> 項目名やフックマクロを定義することでカスタマイズが可能 </li>
+</ul>
+
+
+<h2>ダウンロード。</h2>
+<ul>
+  <li><a href="rireki.cls">rireki.cls</a> - 
+      履歴書 LaTeX クラスファイル</li>
+  <li><a href="sample.tex">sample.tex</a> - 
+      サンプルファイル</li>
+  <li><a href="sample.pdf">sample.pdf</a> - 
+      サンプル出力例 (PDF)</li>
+</ul>
+
+<h2>ツカイカタ。</h2>
+
+<p style="color: gray; font-size: small">
+<sup>注）</sup> 配布ファイルの文字コードは ISO-2022-JP (JIS) になっています．
+多くの日本語TeX で対応されていると思いますが，コンパイルがうまくいかないとき
+には，環境に合わせて変換してください．
+</p>
+
+<h3>データの入力</h3>
+<p><a href="sample.tex">サンプルファイル</a>を参照のこと．</p>
+
+<h3>コンパイル</h3>
+<p><a href="http://www.ascii.co.jp/pb/ptex/">ASCII pLaTeX</a> 
+  での動作を確認しています．</p>
+
+<p>学歴・職歴リスト，免許・資格リストで補助ファイルを使ってるので，
+  コンパイルは 2回実行する必要があります．
+<blockquote>
+ <code>platex <var>sample.tex</var></code>;&nbsp;
+ <code>platex <var>sample.tex</var></code><br />
+ <code>dvips -t b5 <var>sample.dvi</var></code>
+</blockquote>
+</p>
+
+
+<h3>B4 版に 2面刷りにするには (PostScript)</h3>
+<p><a href="http://www.ctan.org/tex-archive/support/psutils/">psutils</a> の
+<code>pstops</code> コマンドを使えば可能です:
+<blockquote>
+ <code>pstops '2:0L@1(25.7cm,0)+1L@1(25.7cm,18.1cm)' <var>sample.ps</var> | lpr</code>
+</blockquote>
+</p>
+
+<h3>PDF への変換</h3>
+<p><a href="http://www.ctan.org/tex-archive/dviware/dvipdfm/">dvipdfm</a> 
+   （日本語対応パッチが必要かも）を使うときれいにできます．
+<blockquote>
+ <code>dvipdfm -p b5 <var>sample.dvi</var></code>
+</blockquote>
+</p>
+
+
+<h2>コウシンリレキ。</h2>
+<h3>version 1.0</h3>
+<ul>
+ <li>2002年01月21日（月）</li>
+ <li> 履歴書クラスファイル，ver. 1.0 公開．</li>
+</ul>
+
+<h3>version 1.1</h3>
+<ul>
+ <li>2002年01月23日（水）</li>
+<li>学歴職歴リストが最大16項目まで記入できます．</li>
+<li>職歴リストが空のときには，「なし」を自動的に追加します．</li>
+<li>学歴リスト・職歴リストの間に空行を挿入します．</li>
+<li>各ページで実行されるフックマクロ (<code>\@firstpagehook</code>，
+    <code>\@secondpagehook</code>) を追加．</li>
+</ul>
+
+<h3>current</h3>
+<ul>
+ <li>2004年01月29日（木）</li>
+ <li>ドキュメント（この頁）を修正しました．</li>
+ <li>デフォルトの文字コードを ISO-2022-JP にしてみました．</li>
+</ul>
+
+<h2>リンクス。</h2>
+<p>基本的な設計は，以下のスタイルファイルを参考にしています．</p>
+<ul>
+ <li><a href="http://www.tamacom.com/rireki.html">LaTeX のための履歴書スタイルファイル</a></li>
+ <li><a href="http://www.econ.ryukoku.ac.jp/~nakagawa/math/knots/cv/index.html">研究者専用履歴書・業績書スタイルファイル</a></li>
+</ul>
+
+<hr></hr>
+<div align="right">
+Copyright &copy; 2002&nbsp; MIYAMOTO Yusuke.&nbsp;&nbsp;Some rights reserved.
+</div>
+
+<div align="right">
+<a href="mailto:yusuke@koko15.hus.osaka-u.ac.jp?subject=about%20rireki.cls">
+ <address>yusuke@koko15.hus.osaka-u.ac.jp</address>
+</a>
+</div>
+
+</body>
+</html>
