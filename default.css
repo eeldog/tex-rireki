@@ -1,0 +1,14 @@
+BODY { background: white; }
+
+IMG.rule { align: center; margin-top: 1em; }
+
+TD { text-align: center; }
+
+H1 {
+  text-align: center;
+  font-size: 150%;
+}
+
+UL LI {
+    list-style-type: circle;
+}
