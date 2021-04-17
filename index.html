@@ -1,11 +1,10 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
-<html lang="ja">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=ISO-2022-JP">
-  <meta name="ROBOTS" content="INDEX">
-  <!-- link rel="stylesheet" href="default.css" type="text/css" -->
+  <meta charset="UTF-8" />
+  <meta name="robots" content="index" />
   <link rel="home" href="../index.html">
-  <title> $BMzNr=q(B LaTeX $B%/%i%9%U%!%$%k(B </title>
+  <title> 履歴書 LaTeX クラスファイル </title>
   <style type="text/css"><!--
     body {
       color: black;
@@ -66,44 +65,45 @@
 </head>
 <body>
 
-<h1> $BMzNr=q(B LaTeX $B%/%i%9%U%!%$%k(B</h1>
+<h1> 履歴書 LaTeX クラスファイル</h1>
 
-<h2>$B%H%/%A%g%&!#(B</h2>
+<h2>トクチョウ。</h2>
 <ul>
-  <li> LaTeX 2&epsilon; $B$KBP1~(B </li>
-  <li> $B4JC1$JF~NO$G!$$=$l$J$j$N=PNO$r<B8=(B </li>
-  <li> $B@8G/7nF|$+$iG/Np$N<+F07W;;!$OBNr859f$N@ZBX$((B </li>
-  <li> $B9`L\L>$d%U%C%/%^%/%m$rDj5A$9$k$3$H$G%+%9%?%^%$%:$,2DG=(B </li>
+  <li> LaTeX 2&epsilon; に対応 </li>
+  <li> 簡単な入力で，それなりの出力を実現 </li>
+  <li> 生年月日から年齢の自動計算，和歴元号の切替え </li>
+  <li> 項目名やフックマクロを定義することでカスタマイズが可能 </li>
 </ul>
 
 
-<h2>$B%@%&%s%m!<%I!#(B</h2>
+<h2>ダウンロード。</h2>
 <ul>
-  <li><a href="rireki.cls">rireki.cls</a> - 
-      $BMzNr=q(B LaTeX $B%/%i%9%U%!%$%k(B</li>
-  <li><a href="sample.tex">sample.tex</a> - 
-      $B%5%s%W%k%U%!%$%k(B</li>
-  <li><a href="sample.pdf">sample.pdf</a> - 
-      $B%5%s%W%k=PNONc(B (PDF)</li>
+  <li><a href="rireki.cls">rireki.cls</a> -
+      履歴書 LaTeX クラスファイル</li>
+  <li><a href="sample.tex">sample.tex</a> -
+      サンプルファイル</li>
+  <li><a href="sample.pdf">sample.pdf</a> -
+      サンプル出力例 (PDF)</li>
 </ul>
 
-<h2>$B%D%+%$%+%?!#(B</h2>
+<h2>ツカイカタ。</h2>
 
 <p style="color: gray; font-size: small">
-<sup>$BCm!K(B</sup> $BG[I[%U%!%$%k$NJ8;z%3!<%I$O(B ISO-2022-JP (JIS) $B$K$J$C$F$$$^$9!%(B
-$BB?$/$NF|K\8l(BTeX $B$GBP1~$5$l$F$$$k$H;W$$$^$9$,!$%3%s%Q%$%k$,$&$^$/$$$+$J$$$H$-(B
-$B$K$O!$4D6-$K9g$o$;$FJQ49$7$F$/$@$5$$!%(B
+<sup>注）</sup> 配布ファイルの文字コードは <del>ISO-2022-JP (JIS)</del>
+<ins>UTF-8</ins> になっています．
+多くの日本語TeX で対応されていると思いますが，コンパイルがうまくいかないとき
+には，環境に合わせて変換してください．
 </p>
 
-<h3>$B%G!<%?$NF~NO(B</h3>
-<p><a href="sample.tex">$B%5%s%W%k%U%!%$%k(B</a>$B$r;2>H$N$3$H!%(B</p>
+<h3>データの入力</h3>
+<p><a href="sample.tex">サンプルファイル</a>を参照のこと．</p>
 
-<h3>$B%3%s%Q%$%k(B</h3>
-<p><a href="http://www.ascii.co.jp/pb/ptex/">ASCII pLaTeX</a> 
-  $B$G$NF0:n$r3NG'$7$F$$$^$9!%(B</p>
+<h3>コンパイル</h3>
+<p><a href="http://www.ascii.co.jp/pb/ptex/">ASCII pLaTeX</a>
+  での動作を確認しています．</p>
 
-<p>$B3XNr!&?&Nr%j%9%H!$LH5v!&;q3J%j%9%H$GJd=u%U%!%$%k$r;H$C$F$k$N$G!$(B
-  $B%3%s%Q%$%k$O(B 2$B2s<B9T$9$kI,MW$,$"$j$^$9!%(B
+<p>学歴・職歴リスト，免許・資格リストで補助ファイルを使ってるので，
+  コンパイルは 2回実行する必要があります．
 <blockquote>
  <code>platex <var>sample.tex</var></code>;&nbsp;
  <code>platex <var>sample.tex</var></code><br />
@@ -112,55 +112,55 @@
 </p>
 
 
-<h3>B4 $BHG$K(B 2$BLL:~$j$K$9$k$K$O(B (PostScript)</h3>
-<p><a href="http://www.ctan.org/tex-archive/support/psutils/">psutils</a> $B$N(B
-<code>pstops</code> $B%3%^%s%I$r;H$($P2DG=$G$9(B:
+<h3>B4 版に 2面刷りにするには (PostScript)</h3>
+<p><a href="http://www.ctan.org/tex-archive/support/psutils/">psutils</a> の
+<code>pstops</code> コマンドを使えば可能です:
 <blockquote>
  <code>pstops '2:0L@1(25.7cm,0)+1L@1(25.7cm,18.1cm)' <var>sample.ps</var> | lpr</code>
 </blockquote>
 </p>
 
-<h3>PDF $B$X$NJQ49(B</h3>
+<h3>PDF への変換</h3>
 
-<p><a href="http://www.ctan.org/tex-archive/dviware/dvipdfmx/">dvipdfmx</a> 
-   $B$r;H$&$H$-$l$$$K$G$-$^$9!%(B
+<p><a href="http://www.ctan.org/tex-archive/dviware/dvipdfmx/">dvipdfmx</a>
+   を使うときれいにできます．
 <blockquote>
  <code>dvipdfmx -p b5 <var>sample.dvi</var></code>
 </blockquote>
 </p>
 
 
-<h2>$B%3%&%7%s%j%l%-!#(B</h2>
+<h2>コウシンリレキ。</h2>
 <h3>version 1.0</h3>
 <ul>
- <li>2002$BG/(B01$B7n(B21$BF|!J7n!K(B</li>
- <li> $BMzNr=q%/%i%9%U%!%$%k!$(Bver. 1.0 $B8x3+!%(B</li>
+ <li>2002年01月21日（月）</li>
+ <li> 履歴書クラスファイル，ver. 1.0 公開．</li>
 </ul>
 
 <h3>version 1.1</h3>
 <ul>
- <li>2002$BG/(B01$B7n(B23$BF|!J?e!K(B</li>
-<li>$B3XNr?&Nr%j%9%H$,:GBg(B16$B9`L\$^$G5-F~$G$-$^$9!%(B</li>
-<li>$B?&Nr%j%9%H$,6u$N$H$-$K$O!$!V$J$7!W$r<+F0E*$KDI2C$7$^$9!%(B</li>
-<li>$B3XNr%j%9%H!&?&Nr%j%9%H$N4V$K6u9T$rA^F~$7$^$9!%(B</li>
-<li>$B3F%Z!<%8$G<B9T$5$l$k%U%C%/%^%/%m(B (<code>\@firstpagehook</code>$B!$(B
-    <code>\@secondpagehook</code>) $B$rDI2C!%(B</li>
+ <li>2002年01月23日（水）</li>
+<li>学歴職歴リストが最大16項目まで記入できます．</li>
+<li>職歴リストが空のときには，「なし」を自動的に追加します．</li>
+<li>学歴リスト・職歴リストの間に空行を挿入します．</li>
+<li>各ページで実行されるフックマクロ (<code>\@firstpagehook</code>，
+    <code>\@secondpagehook</code>) を追加．</li>
 </ul>
 
 <h3>current</h3>
 <ul>
- <li>2004$BG/(B01$B7n(B29$BF|!JLZ!K(B</li>
- <li>$B%I%-%e%a%s%H!J$3$NJG!K$r=$@5$7$^$7$?!%(B</li>
- <li>$B%G%U%)%k%H$NJ8;z%3!<%I$r(B ISO-2022-JP $B$K$7$F$_$^$7$?!%(B</li>
- <li>2008$BG/(B05$B7n(B28$BF|!J2P!K(B</li>
- <li>$B%I%-%e%a%s%H!J$3$NJG!K$r=$@5$7$^$7$?!%(Bdvipdfm $B"*(B dvipdfmx </li>
+ <li>2004年01月29日（木）</li>
+ <li>ドキュメント（この頁）を修正しました．</li>
+ <li>デフォルトの文字コードを ISO-2022-JP にしてみました．</li>
+ <li>2008年05月28日（火）</li>
+ <li>ドキュメント（この頁）を修正しました．dvipdfm → dvipdfmx </li>
 </ul>
 
-<h2>$B%j%s%/%9!#(B</h2>
-<p>$B4pK\E*$J@_7W$O!$0J2<$N%9%?%$%k%U%!%$%k$r;29M$K$7$F$$$^$9!%(B</p>
+<h2>リンクス。</h2>
+<p>基本的な設計は，以下のスタイルファイルを参考にしています．</p>
 <ul>
- <li><a href="http://www.tamacom.com/rireki.html">LaTeX $B$N$?$a$NMzNr=q%9%?%$%k%U%!%$%k(B</a></li>
- <li><a href="http://www.econ.ryukoku.ac.jp/~nakagawa/math/knots/cv/index.html">$B8&5f<T@lMQMzNr=q!&6H@S=q%9%?%$%k%U%!%$%k(B</a></li>
+ <li><a href="http://www.tamacom.com/rireki.html">LaTeX のための履歴書スタイルファイル</a></li>
+ <li><a href="http://www.econ.ryukoku.ac.jp/~nakagawa/math/knots/cv/index.html">研究者専用履歴書・業績書スタイルファイル</a></li>
 </ul>
 
 <hr></hr>
