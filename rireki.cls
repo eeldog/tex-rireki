@@ -130,7 +130,9 @@
 \Put(42,7){\makebox(42,5)[l]{\scriptsize\hspace{12pt}\kana@forename}}
 \Put(87,2){\line(0,-1){22}}
 \Put(88,24){\makebox(12,16)[tl]{\tiny 印}}
-\Put(88,7){\makebox(12,5)[c]{\scriptsize\sexname\hskip 1ex\@sex}}
+\ifx\@sex\empty\else
+  \Put(88,7){\makebox(12,5)[c]{\scriptsize\sexname\hskip 1ex\@sex}}
+\fi
 
 \Put(0,34){\makebox(100,10)[l]{\scriptsize\hspace{1ex}\birthdayname}}
 \Put(0,34){\makebox(100,10)[r]{\@birthday\hskip 2em
@@ -270,7 +272,7 @@
 
 %%再生紙
 \newcommand{\RecycledPaper}{%
-  \AtSecondPage{\Put(150,225){\makebox(0,0)[rt]{\scriptsize 
+  \AtSecondPage{\Put(150,225){\makebox(0,0)[rt]{\scriptsize
     この用紙には再生紙を利用しています。}}}
 }
 
@@ -376,8 +378,8 @@
 \newcommand{\Age}[1]{\def\@age{#1}}
 
 %% 性別
-\newcommand{\@sex}{??}
 \newcommand{\Sex}[1]{\def\@sex{#1}}
+\Sex{}
 
 %% 得意科目
 \newcommand{\@subject}\@empty
