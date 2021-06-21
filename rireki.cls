@@ -339,16 +339,22 @@
   \def\@anotherphone{\hskip 24pt 電話: \texttt{#1}}}
 
 %% 生年月日
+\newif\if@jpyear\@jpyeartrue
+\newcommand{\NengouNotation}{\@jpyeartrue}
+\newcommand{\SeirekiNotation}{\@jpyearfalse}
 \newcommand{\Nengou}{\protect\@nengou}
 \newcommand{\@nengou}[1]{%
   \@tempcnta=#1
   \ifnum\@tempcnta<1989
     \advance\@tempcnta by -1925
     昭和
-  \else
+  \else\ifnum\@tempcnta<2019
     \advance\@tempcnta by -1988
     平成
-  \fi
+  \else
+    \advance\@tempcnta by -2018
+    令和
+  \fi\fi
   \ifnum\@tempcnta=1 元 \else \the\@tempcnta \fi
 }
 \let\年号=\Nengou\relax
@@ -370,7 +376,11 @@
   \else\ifnum\month<\thebirth@month
     \addtocounter{@ge}{-1}
   \fi\fi
-  \def\@birthday{\年号\thebirth@year 年 \thebirth@month 月 \thebirth@day 日生}
+  \if@jpyear
+    \def\@birthday{\年号\thebirth@year 年 \thebirth@month 月 \thebirth@day 日生}
+  \else
+    \def\@birthday{\thebirth@year 年 \thebirth@month 月 \thebirth@day 日生}
+  \fi
 }
 
 %% 年齢
@@ -526,6 +536,9 @@
 \let\保護者住所=\GuardianAddress\relax
 \let\保護者電話番号=\GuardianPhone\relax
 \let\学歴リストの最後で改行=\BackgroundLastNewLine
+\let\西暦表記\SeirekiNotation
+\let\元号表記\GengouNotation
+
 
 %% 項目名
 \newcommand{\historyname}{履歴書}
